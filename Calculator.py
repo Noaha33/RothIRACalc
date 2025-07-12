@@ -65,7 +65,6 @@ class ROTH:
 
             years = list(range(self.startinvest_age + 1, self.cashin_age + 1))
 
-            # First figure: Inflation-Adjusted
             if adjust_for_inflation:
                 fig1 = plt.figure(figsize=(10, 6))
                 plt.plot(years, balances, marker='o', linewidth=2, color='blue', label='Balance (Inflation Adjusted)')
@@ -79,7 +78,6 @@ class ROTH:
                 plt.legend()
                 plt.tight_layout()
 
-            # Second figure: No Inflation
             fig2 = plt.figure(figsize=(10, 6))
             plt.plot(years, balancesNoInflation, marker='o', linewidth=2, color='purple', label='Balance (No Inflation)')
             plt.plot(years, amountInvestedNoInflation, marker='o', linewidth=2, color='orange', label='Amount Invested (No Inflation)')
