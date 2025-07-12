@@ -41,7 +41,7 @@ class ROTH:
             amountInvested.append(running_total)
         
         for year in range(1, growthYears + 1):
-            balance = balance * (1 + self.return_rate)
+            balance = balance + balance * self.return_rate
             balance += self.annual_contribution
             self.annual_contribution += self.annual_contribution*self.annual_contribution_growth
             balances.append(balance)
