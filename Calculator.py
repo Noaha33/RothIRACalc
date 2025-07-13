@@ -90,7 +90,6 @@ class ROTH:
             plt.legend()
             plt.tight_layout()
 
-            # Now show both figures
             plt.show()
 
         if adjust_for_inflation:
